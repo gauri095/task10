@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LaundryMart Animation</title>
+
+<!-- linking css file -->
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    
-    <div class="navbar">
-        <span class="logo">Logo</span>
-       
-        <span class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Services</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
-        </span>
-       <span class="username">Username</span>
-        <button class="menu-btn">☰</button>
-    </div>
 
-    <div class="mobile-menu">
+<!-- simple navbar -->
+<div class="navbar">
+    <span class="logo">LaundryMart</span>
+
+    <span class="links">
         <a href="#">Home</a>
         <a href="#">Services</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
+    </span>
+</div>
+
+
+<!-- HERO SECTION -->
+<div class="hero">
+
+    <!-- left side text -->
+    <div class="text">
+        <h1>Welcome to LaundryMart</h1>
+        <p>We clean your clothes with care.</p>
+        <button>Book Service</button>
     </div>
 
-    <div class="hero1">
-        <div class="left">
-            <h1>Welcome to <span>LaundryMart</span></h1>
-            <p>Your one-stop solution for all your laundry needs.</p>
-            <button class="cta-button">Book a Service Today</button>
+
+    <!-- right side animation -->
+
+    <!-- 
+    orbit = the dashed circle
+    planet-squeeze = wrapper used for squash/stretch animation
+    planet = actual image that rotates around the orbit
+    -->
+    <div class="orbit">
+
+        <div class="planet-squeeze">
+
+            <img class="planet"
+            src="https://plus.unsplash.com/premium_vector-1728553012689-aff42c4a4e7e?q=80&w=580&auto=format&fit=crop"
+            alt="Laundry">
+
         </div>
 
-        <div class="right">
-          
-            <div class="orbit">
-                <div class="planet-squeeze">
-                    <img class="planet"
-                         src="https://plus.unsplash.com/premium_vector-1728553012689-aff42c4a4e7e?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                         alt="LaundryMart">
-                </div>
-            </div>
-        </div>
     </div>
 
-    <script>
-       const btn = document.querySelector(".menu-btn");
-const menu = document.querySelector(".mobile-menu");
+</div>
 
-btn.addEventListener("click", () => {
-    menu.classList.toggle("show-menu");
-});
-
-    </script>
 </body>
 </html>
