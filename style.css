@@ -1,242 +1,183 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* reset default browser spacing */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body {
-    font-family: sans-serif;
-    background-color: #f5f7ff;
-}
-
-/* NAVBAR */
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 32px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #ddd;
-}
-
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #2563eb;
-}
-
-.nav-links a {
-    margin: 0 12px;
-    text-decoration: none;
-    color: #333333;
-    font-size: 15px;
-}
-
-.nav-links a:hover {
-    color: #2563eb;
-}
-
-.username {
-    font-size: 14px;
-    color: #555555;
-}
-
-.menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* MOBILE MENU */
-
-.mobile-menu {
-    display: none;
-    flex-direction: column;
-    background-color: #ffffff;
-    padding: 10px 32px 16px;
-    border-bottom: 1px solid #ddd;
-}
-
-.mobile-menu a {
-    padding: 8px 0;
-    text-decoration: none;
-    color: #333333;
-    font-size: 15px;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-/* HERO SECTION */
-
-.hero1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 80px;
-    gap: 40px;
-}
-
-.left {
-    flex: 1;
-}
-
-.left h1 {
-    font-size: 40px;
-    margin-bottom: 16px;
-    color: #111111;
-    line-height: 1.2;
-}
-
-.left h1 span {
-    color: #2563eb;
-}
-
-.left p {
-    font-size: 17px;
-    color: #555555;
-    margin-bottom: 28px;
-    line-height: 1.6;
-}
-
-.cta-button {
-    padding: 12px 26px;
-    background-color: #2563eb;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.cta-button:hover {
-    background-color: #1d4ed8;
-}
-
-.right {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    min-height: 420px;
-}
-
-/* ORBIT RING */
-
-.orbit {
-    width: 300px;
-    height: 300px;
-    border: 2px dashed gray;
-    border-radius: 50%;
-    position: relative;
-}
-
-.planet-squeeze {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: calc(50% - 50px);
-    left: calc(50% - 50px);
-
-    animation: squeeze 4s ease-in-out infinite;
-}
-
-.planet {
-    width: 100px;
-    height: 100px;      
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    transform-origin: -100px 50px;
-
-    animation: orbit-move 4s linear infinite;
+body{
+font-family:sans-serif;
+background:#f5f7ff;
 }
 
 
+/* ---------- NAVBAR ---------- */
 
-@keyframes orbit-move {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(90deg);
-    }
-    50% {
-        transform: rotate(180deg);
-    }
-    75% {
-        transform: rotate(270deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:15px 30px;
+background:white;
+border-bottom:1px solid #ddd;
 }
 
-@keyframes squeeze {
-    0% {
-        transform: scaleX(1) scaleY(1);
-    }
-
-    20% {
-        transform: scaleX(0.7) scaleY(1.3);
-    }
-
-    40% {
-        transform: scaleX(1) scaleY(1);
-    }
-
-    60% {
-        transform: scaleX(1.3) scaleY(0.7);
-    }
-
-    80% {
-        transform: scaleX(0.85) scaleY(1.15);
-    }
-
-    100% {
-        transform: scaleX(1) scaleY(1);
-    }
+.logo{
+color:#2563eb;
+font-weight:bold;
 }
 
-@media (max-width: 768px) {
+.links a{
+margin:0 10px;
+text-decoration:none;
+color:#333;
+}
 
-    .nav-links,
-    .username {
-        display: none;
-    }
 
-    .menu-btn {
-        display: block;
-    }
+/* ---------- HERO SECTION ---------- */
 
-    .hero1 {
-        flex-direction: column;
-        padding: 32px 20px;
-    }
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:60px;
+}
 
-    .left h1 {
-        font-size: 28px;
-    }
+/* text area */
 
-    .orbit {
-        width: 200px;
-        height: 200px;
-    }
+.text h1{
+margin-bottom:15px;
+}
 
-    
-    .planet-squeeze {
-        width: 70px;
-        height: 70px;
-        top: calc(50% - 35px);
-        left: calc(50% - 35px);
-    }
+.text p{
+margin-bottom:20px;
+}
 
-    .planet {
-        width: 70px;
-        height: 70px;
-        transform-origin: -65px 35px;
-    }
+button{
+padding:10px 20px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:6px;
+}
+
+
+/* ---------- ORBIT ANIMATION ---------- */
+
+/* dashed circle that shows the path of the orbit */
+
+.orbit{
+width:300px;
+height:300px;
+border:2px dashed gray;
+border-radius:50%;
+position:relative;
+}
+
+
+/*
+planet-squeeze container is used only for squash/stretch effect.
+the image sits inside it.
+*/
+
+.planet-squeeze{
+position:absolute;
+top:100px;
+left:100px;
+
+/* squeeze animation runs forever */
+animation:squeeze 4s infinite;
+}
+
+
+/*
+planet image rotates around the orbit.
+
+transform-origin defines the pivot point of rotation.
+
+-100px 50px means:
+100px to the left of the image center.
+50px vertically from top.
+
+this moves the rotation center outside the image
+which makes it travel around the circle instead of spinning in place.
+*/
+
+.planet{
+width:100px;
+height:100px;
+border-radius:50%;
+object-fit:cover;
+
+transform-origin:-100px 50px;
+
+animation:orbitMove 4s linear infinite;
+}
+
+
+/* ---------- ORBIT ROTATION ---------- */
+
+/*
+The image rotates gradually around the circle.
+
+0%  -> starting point
+25% -> quarter circle
+50% -> half circle
+75% -> three quarter circle
+100% -> full circle
+*/
+
+@keyframes orbitMove{
+
+0%{
+transform:rotate(0deg);
+}
+
+25%{
+transform:rotate(90deg);
+}
+
+50%{
+transform:rotate(180deg);
+}
+
+75%{
+transform:rotate(270deg);
+}
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+
+/* ---------- SQUEEZE ANIMATION ---------- */
+
+/*
+This animation slightly stretches and squashes
+the container to create a bouncing / organic motion.
+*/
+
+@keyframes squeeze{
+
+0%{
+transform:scale(1,1);
+}
+
+25%{
+transform:scale(0.8,1.2);
+}
+
+50%{
+transform:scale(1,1);
+}
+
+75%{
+transform:scale(1.2,0.8);
+}
+
+100%{
+transform:scale(1,1);
+}
+
 }
