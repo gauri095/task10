@@ -1,9 +1,15 @@
-LaundryMart — CSS Animation Assignment
-Project Description
-A laundry-service landing page that demonstrates two CSS animation
-techniques applied to an image:
+# LaundryMart Orbit Animation
 
-Orbit rotation — the image travels in a circular path around
-a centre point, like a planet orbiting a star.
-Squeeze / scale effect — the image squishes and stretches at
-different points in the orbit using scaleX and scaleY.
+This project demonstrates a simple CSS animation where an image
+moves in a circular orbit while also applying a squash/stretch effect.
+
+The goal of the assignment was to understand how CSS transforms
+and keyframe animations work.
+
+---
+
+## How to Run
+
+1. Download the project files
+2. Open the folder
+3. Open `index.html` in any web browser
